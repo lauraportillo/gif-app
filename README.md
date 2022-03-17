@@ -1,8 +1,6 @@
-# Practicing Custom Hooks!
+# Gif App!
 
 Work in progress ⛏
-
-Practicing Custom Hooks with **React.JS**
 
 ### 🚀🚀🚀🚀🚀
 
