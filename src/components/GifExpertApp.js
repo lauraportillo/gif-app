@@ -2,17 +2,13 @@ import React, { useState } from 'react';
 import AddCategory from "./AddCategory";
 import '../stylesheets/GifExpertApp.scss';
 import '../stylesheets/Reset.scss';
+import GifGrid from './GifGrid';
+
 
 
 const GifExpertApp = () => {
 
-  const [categories, setCategories] = useState(['One Punch', 'Samurai X', 'Dragon Ball']);
-
-  // const handleAdd = () => {
-  //   const add = [...categories, 'HunterXHunter']
-  //   setCategories(add);
-  //   console.log(add);
-  // }
+  const [categories, setCategories] = useState(['One Punch']);
 
   return (
     <>
@@ -20,13 +16,11 @@ const GifExpertApp = () => {
       <AddCategory setCategories={setCategories} />
       <hr />
 
-      {/* <button onClick={handleAdd}>Agregar</button> */}
-
       <ol>
         {
-          categories.map(category => {
-            return <li key={category}> {category}</li>
-          })
+          categories.map(category => (
+            <GifGrid category={category} key={category} />
+          ))
         }
       </ol>
     </>

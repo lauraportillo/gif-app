@@ -4,7 +4,7 @@ import '../stylesheets/AddCategory.scss';
 
 const AddCategory = ({ setCategories }) => {
 
-    const [inputValue, setInputValue] = useState('hola mundo');
+    const [inputValue, setInputValue] = useState('');
 
     const handleInputChange = (e) => {
         setInputValue(e.target.value);
@@ -18,7 +18,6 @@ const AddCategory = ({ setCategories }) => {
             setCategories(cats => [...cats, inputValue]);
             setInputValue('');
         }
-
     }
 
 
@@ -37,4 +36,4 @@ AddCategory.propTypes = {
     setCategories: PropTypes.func.isRequired
 }
 
-export default AddCategory;
+export default AddCategory; 
