@@ -3,7 +3,8 @@ import '../stylesheets/GifGrid.scss';
 
 const GifGrid = ({ category }) => {
 
-    const [count, setCount] = useState(0);
+    const [images, setImages] = useState([]);
+    console.log(images);
 
     useEffect(() => {
         getGifs();
@@ -23,11 +24,19 @@ const GifGrid = ({ category }) => {
             }
         })
         console.log(gifs);
+        setImages(gifs);
     }
 
     return (
         <>
             <h3>{category}</h3>
+            <ol>
+                {
+                    images.map(({ id, title }) => (
+                        <li key={id}>{title}</li>
+                    ))
+                }
+            </ol>
         </>
     )
 }
