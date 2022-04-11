@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import AddCategory from "./AddCategory";
-import '../stylesheets/GifExpertApp.scss';
-import '../stylesheets/Reset.scss';
-import GifGrid from './GifGrid';
+import GifGrid from './components/GifGrid';
+import AddCategory from "./components/AddCategory";
+import './stylesheets/GifExpertApp.scss';
+import './stylesheets/Reset.scss';
+
 
 
 
