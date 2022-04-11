@@ -1,13 +1,12 @@
 import React from 'react'
+import '../stylesheets/GifGridItem.scss';
 
 const GifGridItem = ({ id, title, url }) => {
 
-    console.log(id, title, url);
-
     return (
-        <div>
-            <img src={url} alt={title} />
-            <h2>{title}</h2>
+        <div className='card'>
+            <img className='card__image' src={url} alt={title} />
+            <p className='card__text'>{title}</p>
         </div>
     )
 }

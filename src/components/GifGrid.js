@@ -5,7 +5,6 @@ import GifGridItem from './GifGridItem';
 const GifGrid = ({ category }) => {
 
     const [images, setImages] = useState([]);
-    console.log(images);
 
     useEffect(() => {
         getGifs();
@@ -24,19 +23,20 @@ const GifGrid = ({ category }) => {
                 url: img.images?.downsized_medium.url
             }
         })
-        console.log(gifs);
+        // console.log(gifs);
         setImages(gifs);
     }
 
     return (
         <>
             <h3>{category}</h3>
-
+            <div className='cardGrid'>
                 {
                 images.map(img => (
                     <GifGridItem key={img.id} {...img} />
                     ))
             }
+            </div>
         </>
     )
 }
