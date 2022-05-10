@@ -5,10 +5,14 @@ exports[`Testing <GifGridItem /> should show the component correctly 1`] = `
   className="card animate__animated animate__fadeIn"
 >
   <img
+    alt="One title"
     className="card__image"
+    src="https://localhost/anything.jpg"
   />
   <p
     className="card__text"
-  />
+  >
+    One title
+  </p>
 </div>
 `;
