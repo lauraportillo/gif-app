@@ -27,6 +27,13 @@ describe('Testing <GifGridItem />', () => {
         expect(img.prop('alt')).toBe(title);
     })
 
-    test('should have the className animate__fadeIn', () => { })
+    test('should have the className animate__fadeIn', () => {
+
+        const div = wrapper.find('div');
+        const className = div.prop('className');
+
+        expect(className.includes('animate__fadeIn')).toBe(true);
+
+    })
 
 })
